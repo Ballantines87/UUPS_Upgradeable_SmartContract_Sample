@@ -1,66 +1,29 @@
-## Foundry
+# 🔄 UUPS Proxy Upgrade Demo
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A minimal Foundry demo showing how to deploy and upgrade a **UUPS (EIP-1822)** proxy from **Implementation V1** to **Implementation V2**.
 
-Foundry consists of:
+---
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## 🧩 Overview
 
-## Documentation
+This project demonstrates:
+- Deploying a UUPS proxy and an implementation contract (`V1`).
+- Upgrading the proxy to a new implementation (`V2`).
+- Preserving state across upgrades.
 
-https://book.getfoundry.sh/
+**Tech stack:**  
+🧱 Solidity (≥0.8.19) • ⚙️ Foundry • 🧪 OpenZeppelin UUPSUpgradeable
 
-## Usage
+---
 
-### Build
 
-```shell
-$ forge build
-```
+---
 
-### Test
+## 🚀 Run locally
 
-```shell
-$ forge test
-```
+```bash
+# Deps
+forge install OpenZeppelin/openzeppelin-contracts-upgradeable
+forge install Cyfrin/foundry-devops 
+forge install openzeppelin/openzeppelin-contracts
 
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
